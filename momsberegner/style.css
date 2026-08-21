@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff,
+            #d0d0d0,
+            #f5f5f5,
+            #c7c7c7,
+            #ffffff
+        );
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            115deg,
+            rgba(255, 120, 190, 0.40),
+            rgba(150, 190, 255, 0.40),
+            rgba(120, 255, 200, 0.35),
+            rgba(255, 235, 100, 0.35),
+            rgba(190, 130, 255, 0.40)
+        );
+
+    filter: blur(30px);
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+/*Momsberegner*/
+.momsberegner {
+    border: solid grey 2px;
+    background-color: #fff;
+    width: 50%;
+    height: 80vh;
+    justify-self: center;
+    margin-top: 10vh;
+}
+
+.momsberegner h1 {
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+.momsberegner h2 {
+      padding-top: 15px;
+    padding-left: 25px;
+}
+
+.beregn {
+    margin-left: 30%;
+    padding-top: 15px;
+}
+
+/*Input og knap*/
+
+input {
+padding: 6px 10px;
+border-radius: 999px;
+margin-right: 2px;
+}
+
+button {
+padding: 6px 10px;
+background-color: rgba(255, 120, 190, 0.40);
+border-radius: 999px;
+margin-left: 2px;
+cursor: pointer;
+}
