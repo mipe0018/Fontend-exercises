@@ -2,7 +2,6 @@
   const guessInput = document.getElementById('guessInput');
   const guessBtn = document.getElementById('guessBtn');
   const feedback = document.getElementById('feedback');
-  const celebration = document.getElementById('celebration');
 
   guessBtn.addEventListener('click', () => {
     const guess = parseInt(guessInput.value, 10);

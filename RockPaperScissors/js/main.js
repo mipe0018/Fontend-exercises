@@ -54,6 +54,10 @@ function result() {
 
 }
 
+//Resultat
+
+
+
 //klaus siger vi skal tænke over at vi kan hurtgt skifte computerens valg ud 
 //med noget random. (F-sætning f - computerens valg = scissors)
 
@@ -61,4 +65,8 @@ function result() {
 
 //hidden resultat kan ses i html
 
-//
+//ctrl + f (find og skift ud alle af samme fx navn, funktion whatever)
+
+
+
+//Return vinder
