@@ -3,12 +3,11 @@ body {
   background-color: #444059;
   font-family: 'Luckiest Guy', cursive;
   color: #eee;
-  height: 100vh;
 }
 
 h1 {
   text-align: center;
-  font-size: 4vw;
+  font-size: 8vw;
 }
 
 #gamefield {
@@ -28,29 +27,26 @@ h1 {
 
 .player {
   transform: scale(var(--rot),1);
-  width: 25vw;
-  height: 25vw;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 4%;
+  width: 40vw;
+  height: 40vw;
   background-size: 100%;
-  background-image: url(../hand_rock.png);
+  background-image: url(hand_rock.png);
 }
 
 .player.rock {
-  background-image: url(../hand_rock.png);
+  background-image: url(hand_rock.png);
 }
 
 .player.paper {
-  background-image: url(../hand_paper.png);
+  background-image: url(hand_paper.png);
 }
 
 .player.scissors {
-  background-image: url(../hand_scissors.png);
+  background-image: url(hand_scissors.png);
 }
 
 .player.shake {
-  background-image: url(../hand_rock.png);
+  /*background-image: url(hand_rock.png);*/
   transform-origin: left center;
   animation: shake 1.8s ease-in 1 forwards;
 }
@@ -117,19 +113,19 @@ h1 {
 #buttons button {
   background-size: 100%;
   border-radius: 10vw;
-  width: 8vw;
-  height: 8vw;
+  width: 10vw;
+  height: 10vw;
   transition: filter .8s;
 }
 
 button.rock {
-  background-image: url(../button_rock.png);
+  background-image: url(button_rock.png);
 }
 
 button.paper {
-  background-image: url(../button_paper.png);
+  background-image: url(button_paper.png);
 }
 
 button.scissors {
-  background-image: url(../button_scissors.png);
+  background-image: url(button_scissors.png);
 }

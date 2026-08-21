@@ -4,3 +4,7 @@
   return Math.floor(Math.random() * max)
  };
 
+
+ export function $(elementByName) {
+  return document.querySelector(elementName);
+ }
