@@ -16,6 +16,7 @@ function momsBeregner() {
 
     momsResultat.textContent = `Moms udgør: ${moms.toFixed(2)} kr.`;
      resultat.textContent = `Beløb inklusiv moms: ${total.toFixed(2)} kr.`;
+     
     console.log(momsResultat);
     console.log(resultat); 
 }
