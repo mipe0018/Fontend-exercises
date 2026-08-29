@@ -11,41 +11,57 @@ const vehicles = [
   { type: "Løbehjul", passengers: 1, isElectric: true },
 ];
 
-
 const tbodyPointer = document.querySelector("tbody");
 
-const electricVehicles = vehicles.filter((vehicle) => vehicle.isElectric);
 
-const passengersMoreThanTwoSeatsVehicle = vehicles.filter((vehicle) => vehicle.passengers > 2)
+// Filtreringer
+const filters = {
+  electric: vehicles.filter((vehicle) => vehicle.isElectric),
 
-const electricOwnedByJonasVehicle = vehicles.filter((vehicle) => vehicle.isElectric && vehicle.ownedBy === "Jonas");
+  moreThanTwoSeats: vehicles.filter((vehicle) => vehicle.passengers > 2),
 
-const ryebreadVehicle = vehicles.filter((vehicle) => vehicle.fuel === "Rugbrød" && vehicle.passengers > 1)
+  electricOwnedByJonas: vehicles.filter(
+    (vehicle) => vehicle.isElectric && vehicle.ownedBy === "Jonas"
+  ),
 
-console.log(passengersMoreThanTwoSeatsVehicle);
+  ryebreadMoreThanOne: vehicles.filter(
+    (vehicle) => vehicle.fuel === "Rugbrød" && vehicle.passengers > 1
+  ),
 
-showTheseVehicles(filter(button.dataset.filter));
+  all: vehicles
+};
 
+
+// Funktion til at vise fartøjer
 function showTheseVehicles(arr) {
+  tbodyPointer.innerHTML = "";
+
   arr.forEach((each) => {
-    tbodyPointer.innerHTML += `<tr>
-  <td>${each.type ? each.type : ""}</td>
-  <td>${each.fuel ? each.fuel : ""}</td>
-  <td>${each.passengers ? each.passengers : ""}</td> 
-  <td>${each.stops ? each.stops : ""}</td> 
-  <td>${each.ownedBy ? each.ownedBy : ""}</td>
-  <td>${each.isElectric?"√":"χ"}</td>
-  <td>${each.isTandem?"√":"χ"}</td>
-</tr>`;
+    tbodyPointer.innerHTML += `
+      <tr>
+        <td>${each.type ?? ""}</td>
+        <td>${each.fuel ?? ""}</td>
+        <td>${each.passengers ?? ""}</td>
+        <td>${each.stops ? each.stops.join(", ") : ""}</td>
+        <td>${each.ownedBy ?? ""}</td>
+        <td>${each.isElectric ? "√" : "X"}</td>
+        <td>${each.isTandem ? "√" : "X"}</td>
+      </tr>
+    `;
   });
 }
 
-//funktion til at vise filtre
+
+// Vis alle fartøjer som udgangspunkt
+showTheseVehicles(vehicles);
 
 
+// Funktion til knapperne
 document.querySelectorAll("button").forEach((button) => {
   button.addEventListener("click", () => {
-    tbodyPointer.innerHTML = ""; 
-    showTheseVehicles(filter[button.dataset.filter]);
+
+    const selectedFilter = button.dataset.filter;
+
+    showTheseVehicles(filters[selectedFilter]);
   });
 });
