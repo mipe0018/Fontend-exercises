@@ -4,17 +4,13 @@
     box-sizing: border-box;
     font-family: cursive;
 }
-body {
-    margin: 0;
-    padding: 0;
-}
 
 header {
     background-color: teal;
 }
 
 h1 {
-    margin: 0px 50px 20px 0px;
+    padding: 20px 50px 20px 50px;
 }
 select {
     margin: 0px 50px 20px 50px;
@@ -30,3 +26,4 @@ select {
 p {
     padding: 200px;
 }
+
