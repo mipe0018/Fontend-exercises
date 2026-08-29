@@ -6,14 +6,16 @@
 }
 
 header {
+    height: 150px;
     background-color: teal;
 }
 
 h1 {
-    padding: 20px 50px 20px 50px;
+    margin: 0px 50px 0px 50px;
+    padding-top: 20px;
 }
 select {
-    margin: 0px 50px 20px 50px;
+    margin: 20px 50px 20px 50px;
     padding: 10px 15px;
 }
 
