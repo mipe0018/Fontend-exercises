@@ -1,7 +1,5 @@
 //Hele navnet upperCase
 
-
-
 //Nr 1 PETER
 
 const fullName = "peter";
@@ -16,7 +14,7 @@ console.log(second);
 
 //Nr 3 PEter
 
-const third = fullName[0].toUpperCase() + fullName[1].toUpperCase() + fullName.substring(2,5);
+const third = fullName[0, 1].toUpperCase() + fullName[1].toUpperCase() + fullName.substring(2,5);
 
 console.log(third);
 
