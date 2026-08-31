@@ -153,11 +153,8 @@ h1 {
 
     /* Gør gradienten større, så den kan bevæge sig */
     background-size: 200% 200%;
-
     color: #ffffff;
-
     font-weight: bold;
-
     box-shadow:
         0 0 8px rgba(255, 255, 255, 0.15);
 
@@ -173,7 +170,6 @@ h1 {
    ========================= */
 
 @keyframes highlight {
-
     from {
         transform: scale(0.7);
         opacity: 0;
@@ -192,7 +188,6 @@ h1 {
    ========================= */
 
 @keyframes rainbow {
-
     0% {
         background-position: 0% 50%;
     }
@@ -403,7 +398,6 @@ h1 {
    ========================= */
 
 @media (max-width: 600px) {
-
     .info {
         padding: 30px 20px;
     }
