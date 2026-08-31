@@ -24,3 +24,4 @@ console.log(fullName.indexOf(" "), fullName.indexOf(" "));
 
 console.log("firstName", `_$(firstName)`);
 console.log("middleName", `_$(middleName)`);
+console.log("lastName", `_$(lastName)`);
