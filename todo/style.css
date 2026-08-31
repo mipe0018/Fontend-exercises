@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f4f1;
+    color: #333;
+    min-height: 100vh;
+}
+
+header {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* Lister */
+
+.list-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+    margin-bottom: 10px;
+
+    background: #f7f4f1;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.list-card:hover {
+    background: #eee9e5;
+}
+
+.list-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.list-icon {
+    font-size: 25px;
+}
+
+
+/* Opgaver */
+
+#today-list {
+    list-style: none;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.todo.completed span {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.todo-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-date {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+
+    width: 90%;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    position: relative;
+}
+
+.modal-content input,
+.modal-content select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    background: none;
+    color: #333;
+
+    font-size: 24px;
+    padding: 0;
+}

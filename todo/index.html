@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life List</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="module" src="main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>🌸 Life List</h1>
+        <p>Dine opgaver samlet ét sted</p>
+    </header>
+
+    <main>
+
+        <!-- Lister -->
+        <section>
+            <div class="section-header">
+                <h2>Mine lister</h2>
+
+                <button id="add-list-btn">
+                    + Ny liste
+                </button>
+            </div>
+
+            <div id="lists-container">
+                <!-- Lister bliver lavet af JavaScript -->
+            </div>
+        </section>
+
+
+        <!-- Dagens opgaver -->
+        <section>
+            <h2>📅 I dag</h2>
+
+            <ul id="today-list">
+                <!-- Dagens opgaver bliver lavet af JavaScript -->
+            </ul>
+        </section>
+
+    </main>
+
+
+    <!-- Popup til ny liste -->
+    <div id="list-modal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <button id="close-list-modal" class="close">
+                ×
+            </button>
+
+            <h2>Opret ny liste</h2>
+
+            <input
+                type="text"
+                id="list-name"
+                placeholder="Fx. Hus, Studie eller Indkøb"
+            >
+
+            <input
+                type="text"
+                id="list-icon"
+                placeholder="Emoji fx 🏠"
+                maxlength="2"
+            >
+
+            <button id="save-list">
+                Opret liste
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Popup til ny opgave -->
+    <div id="todo-modal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <button id="close-todo-modal" class="close">
+                ×
+            </button>
+
+            <h2>Ny opgave</h2>
+
+            <input
+                type="text"
+                id="todo-title"
+                placeholder="Hvad skal gøres?"
+            >
+
+            <label for="todo-deadline">
+                Deadline
+            </label>
+
+            <input
+                type="date"
+                id="todo-deadline"
+            >
+
+            <label for="todo-person">
+                Person
+            </label>
+
+            <select id="todo-person">
+                <option value="Mig">👩 Mig</option>
+                <option value="Kæreste">👨 Kæreste</option>
+                <option value="Fælles">👥 Fælles</option>
+            </select>
+
+            <button id="save-todo">
+                Gem opgave
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
