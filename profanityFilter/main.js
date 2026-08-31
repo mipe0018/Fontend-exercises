@@ -74,7 +74,7 @@ button.addEventListener("click", () => {
 
     //Tjek om teksten allerede er ændret
     if (updated === true) {
-        //showModal() viser vores <dialog>.
+        //showModal() viser vores <dialog>.?
         dialog.showModal();
 
     } else {

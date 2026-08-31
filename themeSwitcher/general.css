@@ -1,0 +1,138 @@
+/*Reset css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #F2F2D5;
+    --bg2-color: #F2E8DC;
+    --text-color: #D9C2A7;
+    --btn-bg: #F2F2F2;
+    --btn-text: #D9C2A7;
+    --border-color: #A6A09C;
+}
+
+/**********Body**********/
+
+body {
+    background-color: var(--bg-color);
+}
+
+/**********header**********/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+    background-color: var(--bg2-color);
+    border: 2px solid var(--border-color);
+}
+
+header h1 {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 70px;
+    color: var(--bg2-color);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--text-color);
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 40px 0 0;
+
+}
+.option p {
+    font-size: large;
+    color: var(--text-color);
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+/*select knappen*/
+
+select {
+appearance: none; /* Remove default OS styling */
+-webkit-appearance: none;
+-moz-appearance: none;
+
+background-color: var(--btn-bg);
+color: var(--btn-text);
+padding: 10px 16px;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+cursor: pointer;
+
+}
+
+select:hover {
+background-color: var(--text-color);
+color: var(--btn-bg);
+}
+
+select:focus {
+outline: none;
+}
+
+
+
+
+/**********main**********/
+
+main {
+    width: 85%;
+    height: 70vh;
+    margin: 0 auto;
+    background-color: var(--bg2-color);
+    border: 2px solid var(--border-color);
+}
+
+.content {
+    margin: 40px 0 0 40px;
+    color: var(--text-color);
+}
+
+.content h2 {
+    padding: 40px 0 40px 0;
+    font-size: xx-large;
+}
+
+.content p {
+    padding: 40px 0 40px 0;
+    font-size: large;
+}
+
+.content a {
+    color: black;
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: #fff;
+}
+
+/**********footer**********/
+
+footer {
+    width: 85%;
+    min-height: 100px;
+    margin: 0 auto;
+    background-color: var(--bg2-color);
+    border: 2px solid var(--border-color);
+}
+
+footer h1 {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 50px;
+    color: var(--text-color);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var();
+}
+
