@@ -1,28 +1,60 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profanity Filter</title>
 
     <link rel="stylesheet" href="style.css">
-    
-    <script type="module" src="main.js"></script>
+
+    <title>Curse Word Filter</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>Profanity Filter</h1>  
-    </header>
+    <div class="info">
 
-<main>
-    <div>
-        <h1>Profanity Filter</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ipsa dolor, debitis voluptatibus sint iure, ratione nam, eveniet blanditiis hic commodi reprehenderit sapiente. Iure saepe, quos cumque a odio veniam.</p>
-        <button>Vis</button>
+        <!-- Overskrift -->
+        <h1>Curse Word Filter</h1>
+
+        <!-- Teksten der skal ændres -->
+        <p class="text">
+            Programmering er sjovt! Men husk altid at bruge
+            var, float og marquee i moderne kodning.
+        </p>
+
+        <!-- Knappen -->
+        <button class="skift">
+            Skift ord
+        </button>
+
     </div>
-</main>
 
-    </body>
-    </html>
+
+    <!-- Dialogboks -->
+    <dialog class="dialog">
+
+        <div class="dialog-content">
+
+            <h2>Teksten er allerede opdateret</h2>
+
+            <p>
+                Alle de dårlige ord er allerede blevet skiftet
+                ud med de gode ord.
+            </p>
+
+            <button class="luk">
+                Luk
+            </button>
+
+        </div>
+
+    </dialog>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

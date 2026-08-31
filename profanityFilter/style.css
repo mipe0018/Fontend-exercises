@@ -1,0 +1,433 @@
+/* =========================
+   GENEREL STYLING
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Chrome + regnbue baggrund */
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(203, 105, 138, 0.35),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255, 140, 0, 0.3),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(0, 255, 120, 0.2),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(0, 140, 255, 0.3),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(172, 152, 187, 0.3),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #282727,
+            #555555,
+            #eeeeee,
+            #777777,
+            #282727
+        );
+
+    color: white;
+}
+
+/* =========================
+   HOVEDBOKS
+   ========================= */
+
+.info {
+    width: 90%;
+    max-width: 750px;
+    padding: 50px;
+    text-align: center;
+    /* Mørk glas-effekt */
+    background: rgba(10, 10, 15, 0.82);
+    /* Chrome-kant */
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 25px;
+    /* Skygge og glød */
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(255, 255, 255, 0.08),
+        inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+    /* Giver en glas-effekt */
+    backdrop-filter: blur(12px);
+}
+
+
+/* =========================
+   OVERSKRIFT
+   ========================= */
+
+h1 {
+    margin-bottom: 35px;
+    font-size: 42px;
+    /* Chrome-farve */
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #777777,
+        #eeeeee,
+        #555555,
+        #ffffff
+    );
+
+    /* Gør gradienten til tekstens farve */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================
+   TEKSTBOKS
+   ========================= */
+
+.text {
+    margin-bottom: 30px;
+    padding: 30px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #f1f5f9;
+    /* Mørk gennemsigtig boks */
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    box-shadow:
+        inset 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   ÆNDREDE ORD
+   ========================= */
+
+.changed {
+    display: inline-block;
+
+    padding: 3px 8px;
+    margin: 0 2px;
+
+    border-radius: 6px;
+
+    background: linear-gradient(
+        120deg,
+        #994f5a,
+        #93774d,
+        #8b8b54,
+        #4a8966,
+        #4a778a,
+        #6f5d9d
+    );
+
+    /* Gør gradienten større, så den kan bevæge sig */
+    background-size: 200% 200%;
+
+    color: #ffffff;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.15);
+
+    /* Begge animationer kører */
+    animation:
+        highlight 0.5s ease,
+        rainbow 4s linear infinite;
+}
+
+
+/* =========================
+   Når ordet bliver ændret
+   ========================= */
+
+@keyframes highlight {
+
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================
+   Bevægelse i farverne
+   ========================= */
+
+@keyframes rainbow {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* =========================
+   SKIFT ORD-KNAP
+   ========================= */
+
+.skift {
+    padding: 15px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    /* Metallic chrome */
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #999999,
+        #6c6c6c,
+        #bbbbbb,
+        #ffffff
+    );
+    color: #111111;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.5),
+        inset 0 1px 3px rgba(255, 255, 255, 0.9);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Når musen er over knappen */
+
+.skift:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(255, 255, 255, 0.25),
+        inset 0 1px 4px rgba(255, 255, 255, 1);
+}
+
+
+/* Når man klikker */
+
+.skift:active {
+    transform: translateY(0);
+}
+
+
+/* Fjern browserens standard outline */
+
+.skift:focus {
+    outline: none;
+}
+
+
+/* =========================
+   DIALOGBOKS
+   ========================= */
+
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 22px;
+    /* Mørk chrome */
+    background: rgba(10, 10, 15, 0.82);
+    color: white;
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================
+   BAGGRUND BAG DIALOG
+   ========================= */
+
+.dialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================
+   DIALOG INDHOLD
+   ========================= */
+
+.dialog-content {
+    min-height: 250px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Dialog overskrift */
+
+.dialog-content h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+
+    /* Chrome-tekst */
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #777777,
+        #eeeeee,
+        #ffffff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+
+/* Dialog tekst */
+
+.dialog-content p {
+    max-width: 320px;
+    margin-bottom: 25px;
+    color: #d1d5db;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* =========================
+   LUK-KNAP
+   ========================= */
+
+.luk {
+    padding: 12px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    /* Mørk metallic */
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #999999,
+        #6c6c6c,
+        #bbbbbb,
+        #ffffff
+    );
+
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.5);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Hover på Luk */
+
+.luk:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.7),
+        0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Klik på Luk */
+.luk:active {
+    transform: translateY(0);
+}
+
+/* Fjern browserens fokus-streg */
+.luk:focus {
+    outline: none;
+}
+
+
+/* =========================
+   MOBIL
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .info {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .text {
+        padding: 20px;
+
+        font-size: 17px;
+    }
+
+    .skift {
+        width: 100%;
+    }
+
+    .dialog {
+        width: 90%;
+    }
+
+    .dialog-content {
+        padding: 35px 20px;
+    }
+
+}
