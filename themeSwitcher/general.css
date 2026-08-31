@@ -14,6 +14,26 @@
     --border-color: #A6A09C;
 }
 
+/* pink tema *//*
+.pink-theme {
+    --bg-color: #F294A5;
+    --bg2-color: #FFB6AF;
+    --text-color: #F294A5;
+    --btn-bg: #E0F0CB;
+    --btn-text: #F294A5;
+    --border-color: white;
+}*/
+
+/* Dark tema *//*
+.dark-theme {
+    --bg-color: #211A1C;
+    --bg2-color: #302326;
+    --text-color: #E8A0A8;
+    --btn-bg: #E8A0A8;
+    --btn-text: #211A1C;
+    --border-color: #6B4A50;
+}*/
+
 /**********Body**********/
 
 body {
@@ -109,8 +129,10 @@ main {
 }
 
 .content a {
-    color: black;
+    color: var(--border-color);
     text-decoration: none;
+    font-size: larger;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, cursive;
 }
 
 .content a:hover {
