@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+
+/**********Color themes**********/
+
+/*Light*/
+
 :root {
     --bg-color: #F2F2D5;
     --bg2-color: #F2E8DC;
@@ -13,6 +18,10 @@
     --btn-text: #D9C2A7;
     --border-color: #A6A09C;
 }
+
+/*Dark*/
+
+/*Hawaii*/
 
 /**********Body**********/
 
