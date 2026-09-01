@@ -80,7 +80,6 @@ select {
 appearance: none; /* Remove default OS styling */
 -webkit-appearance: none;
 -moz-appearance: none;
-
 background-color: var(--btn-bg);
 color: var(--btn-text);
 padding: 10px 16px;
@@ -88,7 +87,6 @@ border: none;
 border-radius: 6px;
 font-size: 16px;
 cursor: pointer;
-
 }
 
 select:hover {
