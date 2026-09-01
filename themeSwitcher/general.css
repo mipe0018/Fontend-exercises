@@ -14,7 +14,7 @@
     --border-color: #A6A09C;
 }
 
-/* pink tema *//*
+/* pink tema */
 .pink-theme {
     --bg-color: #F294A5;
     --bg2-color: #FFB6AF;
@@ -22,9 +22,9 @@
     --btn-bg: #E0F0CB;
     --btn-text: #F294A5;
     --border-color: white;
-}*/
+}
 
-/* Dark tema *//*
+/* Dark tema */
 .dark-theme {
     --bg-color: #211A1C;
     --bg2-color: #302326;
@@ -32,7 +32,7 @@
     --btn-bg: #E8A0A8;
     --btn-text: #211A1C;
     --border-color: #6B4A50;
-}*/
+}
 
 /**********Body**********/
 
