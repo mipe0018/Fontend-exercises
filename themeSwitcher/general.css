@@ -7,31 +7,85 @@
 /*light-tema som default*/
 :root {
     --bg-color: #F2F2D5;
+    --headerbg-color: #f1e0cc;
     --bg2-color: #F2E8DC;
     --text-color: #D9C2A7;
+    --darktext-color: #596265;
     --btn-bg: #F2F2F2;
     --btn-text: #D9C2A7;
     --border-color: #A6A09C;
+    --footer-color: #D9C2A7;
 }
 
 /* pink tema */
 .pink-theme {
-    --bg-color: #F294A5;
+    --bg-color: #FFDCF4;
+    --headerbg-color: #fbaaa3;
     --bg2-color: #FFB6AF;
-    --text-color: #F294A5;
-    --btn-bg: #E0F0CB;
+    --text-color: #FFDCF4;
+    --darktext-color: #596265;
+    --btn-bg: #FFDCF4;
     --btn-text: #F294A5;
-    --border-color: white;
+    --border-color: #F294A5;
+    --footer-color: #fbbeb9;
+}
+
+
+
+/* mocha-theme */
+.mocha-theme {
+    --bg-color: #241C18;
+--headerbg-color: #C9A27E;
+--bg2-color: #332722;
+--text-color: #E6CDB5;
+--darktext-color: #75665C;
+--btn-bg: #C9A27E;
+--btn-text: #241C18;
+--border-color: #6B5142;
+
+--footer-color: #1C1512;
+}
+
+/* pastel-theme */
+.pastel-theme {
+    --bg-color: #FFF4F9;
+    --headerbg-color: #F5B8D1;
+    --bg2-color: #EEDDF2;
+    --text-color: #E4868D;
+    --darktext-color: #98899F;
+    --btn-bg: #9FCBE3;
+    --btn-text: #625067;
+    --border-color: #EBCB78;
+
+    --footer-color: #DFD0E9;
+}
+
+
+/* cloud-theme */
+.cloud-theme {
+    --bg-color: #EAF2F8;
+--headerbg-color: #BFD9EA;
+--bg2-color: #DCE9F2;
+--text-color: #4B6575;
+--darktext-color: #8295A1;
+--btn-bg: #4B6575;
+--btn-text: #334854;
+--border-color: #A9BEC9;
+
+--footer-color: #D2E1E9;
 }
 
 /* Dark tema */
 .dark-theme {
     --bg-color: #211A1C;
+    --headerbg-color: #302326;
     --bg2-color: #302326;
     --text-color: #E8A0A8;
+    --darktext-color: #596265;
     --btn-bg: #E8A0A8;
     --btn-text: #211A1C;
     --border-color: #6B4A50;
+    --footer-color: #302326;
 }
 
 /**********Body**********/
@@ -48,7 +102,7 @@ header {
     align-items: center;
     width: 85%;
     margin: 0 auto;
-    background-color: var(--bg2-color);
+    background-color: var(--headerbg-color);
     border: 2px solid var(--border-color);
     border-bottom: none;
 }
@@ -57,7 +111,7 @@ header h1 {
     margin-left: 20px;
     padding: 10px;
     font-size: 70px;
-    color: var(--bg2-color);
+    color: var(--headerbg-color);
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: var(--text-color);
 }
@@ -93,12 +147,12 @@ select {
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
-
+    outline: none;
 }
 
 select:hover {
 background-color: var(--text-color);
-color: var(--btn-bg);
+color: var(--darktext-color);
 
 }
 
@@ -144,7 +198,7 @@ main {
 }
 
 .content a:hover {
-    color: #fff;
+    color: var(--text-color);
 }
 
 /**********footer**********/
@@ -153,7 +207,7 @@ footer {
     width: 85%;
     min-height: 100px;
     margin: 0 auto;
-    background-color: var(--bg2-color);
+    background-color: var(--footer-color);
     border: 2px solid var(--border-color);
     border-top: none;
 }
@@ -162,7 +216,7 @@ footer h1 {
     margin-left: 20px;
     padding: 10px;
     font-size: 50px;
-    color: var(--text-color);
+    color: var(--btn-bg);
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var();
 }

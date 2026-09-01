@@ -1,0 +1,90 @@
+/**********Reset CSS*********/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**********Body**********/
+
+body {
+    background-color: #F2EAE4;
+}
+
+/**********Header**********/
+
+h1 {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: #F2A7CA;
+    font-family: cursive;
+    text-shadow: 2px 2px 2px #0d0d0d69;
+}
+/**********Knapper**********/
+
+.btns {
+    display: flex;
+    width: 85%;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+}
+
+.btns p {
+    padding-top: 10px;
+    font-family: cursive;
+}
+
+.btns button {
+    margin:  0px 20px 0px 20px;
+    cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #b1c7e4;
+  border: none;
+  box-shadow: 2px 2px 2px #0d0d0d69;
+  font-family: cursive;
+}
+
+.btns button:hover {
+    background-color: #d4dfef;
+}
+
+/**********Tabellen**********/
+
+table {
+  width: 85%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #F2A7CA;
+  color: white;
+  padding: 14px;
+  text-align: left;
+  font-family: cursive;
+  text-shadow: 2px 2px 2px #0d0d0d69;
+}
+
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+  background-color: #f1f5f9;
+}
+
+td:nth-child(6),
+td:nth-child(7) {
+  text-align: center;
+  color: #16a34a;
+  font-weight: bold;
+}
+
