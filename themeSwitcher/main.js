@@ -19,7 +19,7 @@ function optionChoice() {
         document.body.classList.add("dark-theme");
     }
     else if (choice === "mocha") {
-        document.body.classList.add("mocha-them");
+        document.body.classList.add("mocha-theme");
     }
     else if (choice === "pastel") {
         document.body.classList.add("pastel-theme");

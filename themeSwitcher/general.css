@@ -34,16 +34,16 @@
 
 /* mocha-theme */
 .mocha-theme {
-    --bg-color: #241C18;
---headerbg-color: #C9A27E;
---bg2-color: #332722;
---text-color: #E6CDB5;
---darktext-color: #75665C;
---btn-bg: #C9A27E;
---btn-text: #241C18;
---border-color: #6B5142;
+    --bg-color: #2A1D18;
+    --headerbg-color: #B9825B;
+    --bg2-color: #3A2922;
+    --text-color: #D9B89C;
+    --darktext-color: #8E7566;
+    --btn-bg: #C99A72;
+    --btn-text: #2A1D18;
+    --border-color: #725141;
 
---footer-color: #1C1512;
+    --footer-color: #211713;
 }
 
 /* pastel-theme */
