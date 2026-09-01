@@ -1,7 +1,11 @@
 "use strict";
 
+//hent select knappen
 const themeSelect = document.getElementById("theme-select");
 
+//Ved forskellige valg tilføj resprektiv value (choice = value under option i html)
+
+//tilføj derefter det resprektive tema til body.
 function optionChoice() {
     const choice = themeSelect.value;
 
@@ -40,3 +44,4 @@ themeSelect.addEventListener("change", optionChoice);
 
 // Ændrer 'select' til 'themeSelect', så det matcher variabelen i toppen
 //themeSelect.addEventListener("change", optionChoice);
+
