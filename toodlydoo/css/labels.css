@@ -1,0 +1,46 @@
+/*task's*/
+.taskbox {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    border: 0.5px solid var(--browntext-color);
+    padding: 20px;
+}
+
+.taskbox label {
+    color: var(--browntext-color);
+    padding-left: 6px;
+}
+
+
+.taskbox input {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    background-color: var(--background-color);
+    
+    border: 0.5px solid var(--browntext-color);
+    border-radius: 999px;
+}
+/* When the checkbox is checked, add a blue background */
+
+.taskbox input:checked {
+    background-color: var(--pinktext-color);
+    
+}
+
+/* On mouse-over, add a grey background color */
+.taskbox input:checked:hover {
+    background-color: var(--whitedetails-color);
+}
+
+.taskbox input:checked::after {
+    content: "✔";
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

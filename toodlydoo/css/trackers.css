@@ -1,0 +1,36 @@
+.topText {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tracker {
+    width: 97%;
+    margin: 0 auto;
+    background-color: var(--background-color);
+border-radius: 25px;
+
+    margin-top: 13px;
+    padding-bottom: 20px;
+    box-shadow:inset 0px 0px 8px var(--browntext-color);
+}
+
+.tracker h2 {
+    padding: 20px;
+    color: var(--browntext-color);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tracker h3 {
+    padding: 20px 20px 10px 20px;
+    color: var(--pinktext-color);
+    font-size: 12px;
+    font-weight: bold;
+    
+    margin-top: 4px;
+}
+
+.tracker p {
+    padding: 0px 20px 20px 20px;
+    color: var(--browntext-color);
+}

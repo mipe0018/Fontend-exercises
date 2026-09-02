@@ -11,104 +11,119 @@
     font-style: normal;
 }
 
-body {
-    background-color: var(--background-color);
-    
-}
-
-
-/*****Farver*****/
-
 :root {
-    /*Layout*/
+    /* Layout */
     --background-color: #D0B9A8;
     --backgroundlight-color: #E2D2C5;
-    /*text*/
-    --browntext-color: #725540; 
+
+    /* Text */
+    --browntext-color: #725540;
     --pinktext-color: #D66E9F;
-    /*details*/
+
+    /* Details */
     --whitedetails-color: #E5DECB;
 }
 
-/*Dark-theme*/
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
 
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
 
-
-/*****layout*****/
+/***** HEADER *****/
 
 header {
-   width: 100%;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
     justify-items: center;
 }
 
 .topButtons {
     display: flex;
- width: 90%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-  justify-content: space-between;
-  
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-
-.headline  {
-   margin: 0 auto;
+.headline {
+    width: 100%;
+    margin: 0 auto;
     justify-items: center;
+    text-align: center;
     margin-top: -20px;
+    padding: 0 20px;
 }
 
-.headline  h1 {
-color: var(--browntext-color);
+.headline h1 {
+    color: var(--browntext-color);
     font-family: 'TrainOne', sans-serif;
-    font-size: 32px;
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.1;
+    overflow-wrap: break-word;
 }
 
 .headline h2 {
-    
     color: var(--browntext-color);
-    
-   
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.3;
 }
 
+/***** WRAPPER *****/
+
 .wrapper {
-background-color: var(--backgroundlight-color);
+    background-color: var(--backgroundlight-color);
     width: 97%;
-    margin: 0 auto;
-    margin-top: 8px;
+    max-width: 1400px;
+    margin: 8px auto;
     padding-bottom: 20px;
-    margin-bottom: 8px;
     min-height: fit-content;
     border-radius: 25px;
     box-shadow: 0px 2px 4px var(--browntext-color);
 }
 
+/***** BUTTONS AREA *****/
+
 .buttons {
     width: 90%;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: 5px auto 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     text-align: center;
     align-items: center;
-    margin-top: 5px;
-    
 }
 
-/*****Knapper*****/
+/***** KNAPPER *****/
 
-/*home + theme btn*/
+/* Home + theme btn */
 
 .homeBtn {
-border-radius: 999px;
+    border-radius: 999px;
     background-color: var(--pinktext-color);
     color: var(--whitedetails-color);
     margin-top: 15px;
     width: 35px;
     height: 35px;
+    min-width: 35px;
     border: none;
     box-shadow: 0px 2px 4px var(--browntext-color);
-    
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.homeBtn:hover {
+    background-color: var(--whitedetails-color);
+    color: var(--pinktext-color);
 }
 
 .themeBtn {
@@ -117,162 +132,399 @@ border-radius: 999px;
     border: none;
     background-color: var(--backgroundlight-color);
     color: var(--browntext-color);
-    font-weight:900;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-/*tabs*/
-
-.brownLink {
-    text-decoration: none;
-    background-color: var(--background-color);
+.themeBtn:hover {
     color: var(--pinktext-color);
-    font-size: 14px;    
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 25px;
-    box-shadow: 0px 2px 4px var(--browntext-color);
 }
 
+/***** TABS *****/
 
-
+.brownLink,
 .pinkLink {
     text-decoration: none;
-    background-color: var(--pinktext-color);
-    color: var(--browntext-color);
     font-size: 14px;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 25px;
     box-shadow: 0px 2px 4px var(--browntext-color);
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    transition: 0.2s ease;
 }
 
-/*Add-btn*/
+.brownLink {
+    background-color: var(--background-color);
+    color: var(--pinktext-color);
+}
+
+.brownLink:hover {
+    background-color: var(--whitedetails-color);
+    color: var(--pinktext-color);
+}
+
+.pinkLink {
+    background-color: var(--pinktext-color);
+    color: var(--browntext-color);
+}
+
+.pinkLink:hover {
+    background-color: var(--whitedetails-color);
+    color: var(--pinktext-color);
+}
+
+/***** ADD BUTTON *****/
 
 .addBtn {
     background-color: var(--pinktext-color);
     width: 70px;
     height: 70px;
+    min-width: 70px;
     border-radius: 999px;
     border: none;
     color: var(--whitedetails-color);
     font-size: 36px;
     margin-top: 10px;
     box-shadow: 0px 2px 4px var(--browntext-color);
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-/*****main section grid*****/
+.addBtn:hover {
+    background-color: var(--whitedetails-color);
+    color: var(--pinktext-color);
+}
+
+/***** MAIN SECTION GRID *****/
 
 .grid_1_1 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     width: 97%;
-    margin: 0 auto;
-    margin-top: 13px;
-    
+    max-width: 1300px;
+    margin: 13px auto 0;
 }
 
 .topText {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
+
+/***** TASKS *****/
 
 .tasks {
+    width: 100%;
+    min-width: 0;
     grid-column: 1;
-background-color: var(--background-color);
-border-radius: 25px;
-
+    background-color: var(--background-color);
+    border-radius: 25px;
     padding-bottom: 20px;
-    box-shadow:inset 0px 0px 8px var(--browntext-color);
+    box-shadow: inset 0px 0px 8px var(--browntext-color);
+    overflow-wrap: break-word;
 }
+
 .tasks h2 {
     padding: 20px;
     color: var(--browntext-color);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
 }
+
 .tasks h3 {
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     color: var(--pinktext-color);
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
+    margin-top: 4px;
 }
+
 .tasks p {
-    padding: 10px;
     padding: 0px 20px 20px 20px;
     color: var(--browntext-color);
+    overflow-wrap: break-word;
 }
+
+/***** LISTS *****/
 
 .lists {
+    width: 100%;
+    min-width: 0;
     grid-column: 2;
-background-color: var(--background-color);
-border-radius: 25px;
-
+    background-color: var(--background-color);
+    border-radius: 25px;
     padding-bottom: 20px;
-    box-shadow:inset 0px 0px 8px var(--browntext-color);
+    box-shadow: inset 0px 0px 8px var(--browntext-color);
+    overflow-wrap: break-word;
 }
+
 .lists h2 {
     padding: 20px;
     color: var(--browntext-color);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-}
-.lists h3 {
-    padding: 20px;
-    color: var(--pinktext-color);
-    font-size: 16px;
-    font-weight: bold;
-}
-.lists p {
-    padding: 10px;
-    padding: 0px 20px 20px 20px;
-    color: var(--browntext-color);
 }
 
-/*****Notes*****/
+.lists h3 {
+    padding: 20px 20px 10px 20px;
+    color: var(--pinktext-color);
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.lists p {
+    padding: 0px 20px 20px 20px;
+    color: var(--browntext-color);
+    overflow-wrap: break-word;
+}
+
+/***** NOTES *****/
 
 .notes {
     width: 97%;
-    margin: 0 auto;
+    max-width: 1300px;
+    margin: 13px auto 0;
     background-color: var(--background-color);
-border-radius: 25px;
-
-    margin-top: 13px;
+    border-radius: 25px;
     padding-bottom: 20px;
-    box-shadow:inset 0px 0px 8px var(--browntext-color);
+    box-shadow: inset 0px 0px 8px var(--browntext-color);
+    overflow-wrap: break-word;
 }
 
 .notes h2 {
     padding: 20px;
     color: var(--browntext-color);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .notes h3 {
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     color: var(--pinktext-color);
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
+    margin-top: 4px;
 }
 
 .notes p {
     padding: 0px 20px 20px 20px;
     color: var(--browntext-color);
+    overflow-wrap: break-word;
 }
 
-/*****Footer*****/
+/***** FOOTER *****/
 
 footer {
     width: 97%;
+    max-width: 1300px;
+    margin: 0 auto;
     justify-content: center;
     display: flex;
 }
 
-/*****Farver*****/
+/************************************************
+                RESPONSIVE
+************************************************/
 
-/*****Farver*****/
+/***** TABLET *****/
 
-/*****Farver*****/
+@media (max-width: 768px) {
 
-/*****Farver*****/
+    .wrapper {
+        width: 95%;
+        border-radius: 20px;
+    }
+
+    .topButtons {
+        width: 92%;
+    }
+
+    .headline {
+        margin-top: -10px;
+    }
+
+    .headline h1 {
+        font-size: clamp(2rem, 8vw, 3.2rem);
+    }
+
+    .headline h2 {
+        font-size: clamp(0.9rem, 3vw, 1.3rem);
+    }
+
+    .buttons {
+        width: 92%;
+        gap: 8px;
+    }
+
+    .brownLink,
+    .pinkLink {
+        font-size: 13px;
+        padding: 9px 15px;
+    }
+
+    .grid_1_1 {
+        width: 94%;
+        gap: 10px;
+    }
+
+    .notes {
+        width: 94%;
+    }
+}
+
+/***** MOBILE *****/
+
+@media (max-width: 600px) {
+
+    .wrapper {
+        width: 94%;
+        margin-top: 5px;
+        border-radius: 18px;
+    }
+
+    .topButtons {
+        width: 90%;
+    }
+
+    .headline {
+        margin-top: -5px;
+        padding: 0 10px;
+    }
+
+    .headline h1 {
+        font-size: clamp(1.8rem, 11vw, 2.7rem);
+    }
+
+    .headline h2 {
+        font-size: clamp(0.85rem, 4vw, 1.1rem);
+    }
+
+    /***** Buttons *****/
+
+    .buttons {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .brownLink,
+    .pinkLink {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 11px 15px;
+    }
+
+    .addBtn {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        font-size: 30px;
+        margin-top: 5px;
+    }
+
+    /***** Main grid becomes one column *****/
+
+    .grid_1_1 {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .tasks,
+    .lists {
+        width: 100%;
+        grid-column: 1;
+    }
+
+    .notes {
+        width: 92%;
+        margin-top: 10px;
+    }
+
+    .topText {
+        gap: 5px;
+    }
+
+    .tasks h2,
+    .lists h2,
+    .notes h2 {
+        padding: 17px;
+    }
+
+    .tasks h3,
+    .lists h3,
+    .notes h3 {
+        padding: 15px 17px 8px 17px;
+    }
+
+    .tasks p,
+    .lists p,
+    .notes p {
+        padding: 0 17px 17px 17px;
+    }
+}
+
+/***** SMALL MOBILE *****/
+
+@media (max-width: 400px) {
+
+    .wrapper {
+        width: 93%;
+    }
+
+    .topButtons {
+        width: 88%;
+    }
+
+    .headline h1 {
+        font-size: 1.8rem;
+    }
+
+    .headline h2 {
+        font-size: 0.85rem;
+    }
+
+    .buttons {
+        width: 88%;
+    }
+
+    .brownLink,
+    .pinkLink {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .grid_1_1,
+    .notes {
+        width: 90%;
+    }
+
+    .tasks h2,
+    .lists h2,
+    .notes h2 {
+        padding: 15px;
+    }
+
+    .tasks h3,
+    .lists h3,
+    .notes h3 {
+        padding: 13px 15px 7px 15px;
+    }
+
+    .tasks p,
+    .lists p,
+    .notes p {
+        padding: 0 15px 15px 15px;
+        font-size: 14px;
+    }
+}
