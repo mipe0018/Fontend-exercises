@@ -47,6 +47,7 @@ header {
  width: 90%;
     margin: 0 auto;
   justify-content: space-between;
+  
 }
 
 
@@ -112,7 +113,7 @@ border-radius: 999px;
 
 .themeBtn {
     margin-top: 6px;
-    font-size: 32px;
+    font-size: 36px;
     border: none;
     background-color: var(--backgroundlight-color);
     color: var(--browntext-color);
