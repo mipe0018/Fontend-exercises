@@ -24,6 +24,23 @@
     --whitedetails-color: #E5DECB;
 }
 
+
+/*Dark-theme*/ 
+
+.dark-theme {
+    /* Layout */
+    --background-color: #292124;
+    --backgroundlight-color: #382C32;
+
+    /* Text */
+    --browntext-color: #E6D5CC;
+    --pinktext-color: #D982AD;
+
+    /* Details */
+    --whitedetails-color: #F2E6E0;
+}
+
+
 html {
     width: 100%;
     overflow-x: hidden;
@@ -63,12 +80,17 @@ header {
     padding: 0 20px;
 }
 
-.headline h1 {
+.headline a {
     color: var(--browntext-color);
+    text-decoration: none;
     font-family: 'TrainOne', sans-serif;
     font-size: clamp(2rem, 4vw, 4rem);
     line-height: 1.1;
     overflow-wrap: break-word;
+}
+
+.headline a:hover {
+    color: var(--pinktext-color);
 }
 
 .headline h2 {
@@ -244,6 +266,11 @@ header {
     font-size: 12px;
     font-weight: bold;
     margin-top: 4px;
+    cursor: pointer;
+}
+
+.tasks h3:hover {
+   color: var(--whitedetails-color);
 }
 
 .tasks p {
@@ -278,6 +305,11 @@ header {
     font-size: 12px;
     font-weight: bold;
     margin-top: 4px;
+    cursor: pointer;
+}
+
+.lists h3:hover {
+    color: var(--whitedetails-color);
 }
 
 .lists p {
@@ -312,6 +344,11 @@ header {
     font-size: 12px;
     font-weight: bold;
     margin-top: 4px;
+    cursor: pointer;
+}
+
+.notes h3:hover {
+    color: var(--whitedetails-color);
 }
 
 .notes p {
