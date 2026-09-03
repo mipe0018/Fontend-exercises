@@ -2,6 +2,13 @@
 
 window.addEventListener("DOMContentLoaded", start);
 
+const Animal = {
+        name: "-default name-",
+        desc: "-no description-",
+        type: "-unknown-",
+        age: 0
+};
+
 const allAnimals = [];
 
 function start( ) {
@@ -9,6 +16,7 @@ function start( ) {
 
     loadJSON();
 }
+
 
 function loadJSON() {
     fetch("animals.json")
@@ -22,7 +30,28 @@ function loadJSON() {
 function prepareObjects( jsonData ) {
     jsonData.forEach( jsonObject => {
         // TODO: Create new object with cleaned data - and store that in the allAnimals array
+        const animal = Object.create(Animal);
+
+        const fullname = jsonObject.fullname; 
         
+        const firstSpace = fullname.indexOf(" ");
+        const secondSpace = fullname.indexOf(" ", firstSpace + 1);
+        const lastSpace = fullname.lastIndexOf(" ");
+
+        const name = fullname.substring(0, firstSpace);
+        const desc = fullname.substring(secondSpace + 1, lastSpace);
+        const type = fullname.substring(lastSpace + 1);
+
+        animal.name = name;
+        animal.desc = desc;
+        animal.type = type;
+        animal.age = jsonObject.age;
+
+        console.log(`name: _${animal.name}_
+            desc: _${animal.desc}_
+            type: _${animal.type}_`);
+
+        allAnimals.push(animal);
         // TODO: MISSING CODE HERE !!!
     });
 

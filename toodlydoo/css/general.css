@@ -365,6 +365,7 @@ footer {
     margin: 0 auto;
     justify-content: center;
     display: flex;
+    padding-top: 20px;
 }
 
 /************************************************
