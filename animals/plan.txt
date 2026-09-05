@@ -1,7 +1,7 @@
 Filtering
-- try hardcoded filter - only cats
-- try another filter - only dogs
-- filter either cats or dogs
+- try hardcoded filter - only cats //
+- try another filter - only dogs //
+- filter either cats or dogs //
 - add user interactivity 
 - add the "all".filter
 
