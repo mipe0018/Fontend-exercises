@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+   margin: 50px 0px 0px 50px;
+   font-family: cursive;
+    
+}
+
+.netflixBox {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.netflixBtn {
+    padding: 20px 60px;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: teal;
+    font-size: 16px;
+    font-family: cursive;
+}
+
