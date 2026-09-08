@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+}
+/*farver*/
+:root {
+    /* Baggrund */
+    --pink-light: #ffd6e0;
+    --pink: #ffc6c7;
+    --peach: #ffb5a7;
+    --peach-light: #f7c5b5;
+
+    /* Primær detaljefarve */
+    --dark-rose: #8f3f56;
+
+    /* Sekundær detaljefarve */
+    --terracotta: #b85c5c;
+
+    /* Mørk tekst */
+    --text-dark: #4a2932;
+
+    /* Lys tekst */
+    --text-light: #fff8f5;
+
+    /* Knapper */
+    --button: #a94f65;
+    --button-hover: #863d51;
+
+    /* Kanter */
+    --border: #e49a9a;
+
+    /* Hvid/pastel til cards */
+    --card: #fff4f1;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        235deg,
+        #ffd6e0,
+    #ffc6c7,
+    #ffb5a7,
+    #f7c5b5
+    );
+}
+
+/***Calculator***/
+
+.calculator {
+    border: 1px solid var(--dark-rose);
+    padding: 20px;
+    border-radius: 16px;
+    background-color: var(--pink);
+    box-shadow:
+        0 6px 16px rgba(143, 63, 86, 0.15),
+        0 0 8px rgba(255, 181, 167, 0.45),
+        0 0 16px rgba(255, 181, 167, 0.35);
+}
+
+input {
+    width: 100%;
+    border: none;
+    padding: 6px;
+    margin: 12px 0;
+    background: transparent;
+    box-shadow:
+        0 0 5px rgba(143, 63, 86, 0.20),
+        0 0 12px rgba(255, 181, 167, 0.50);
+        font-size: 20px;
+        text-align: right;
+        cursor: pointer;
+}
+
+input::placeholder {
+    color: var(--text-dark);
+}
+
+input:hover {
+    background-color: var(--pink-light);
+}
+
+/*knaapper Generelt*/
+
+button {
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 6px;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 20px;
+    box-shadow:
+        0 0 5px rgba(143, 63, 86, 0.20),
+        0 0 12px rgba(255, 181, 167, 0.50);
+        color: var(--terracotta);
+        cursor: pointer;
+
+}
+
+button:hover {
+    background-color: var(--pink-light);
+}
+
+/*specielle knapper*/
+
+.equalBtn {
+    background-color: var(--button);
+color: var(--text-dark);
+}
+
+.equalBtn:hover {
+    background-color: var(--button-hover);
+
+}
+
+.operator {
+    color: var(--text-dark);
+}
