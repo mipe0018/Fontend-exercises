@@ -12,7 +12,7 @@ Sorting
 - sort either name or type ✔️
 - add user interactivity ✔️
 - a more generic sort function ✔️
-- change sort-direction *important!
+- change sort-direction *important! ✔️
 - add some cleanup
 
 Combining filtering and sorting - may result conflict 
@@ -20,3 +20,9 @@ Combining filtering and sorting - may result conflict
 
 
 Der kan altid tilføjes flere punkter hvis nogle punkter er for komplekse.
+
+//============================================================
+//                     Spørgsmål
+// ============================================================
+
+Sortering af liste efter filtrering?
