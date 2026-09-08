@@ -6,7 +6,7 @@
 
 Denne if, else if, else kode tjekker om man er male eller female og om man er over 18
 
--- prøv at ændre age og gender for at se de forskelligeudfald i konsollen
+-- prøv at ændre age og gender for at se de forskellige udfald i konsollen
 
 -- husk aktiver script i html.
 

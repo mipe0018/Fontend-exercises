@@ -124,9 +124,54 @@ itemsArr[3] = false;
 console.log(itemsArr[3]); 
 */
 /* --------------------------------------
-          Indsæt tekst i html-body
+          Functions
 ----------------------------------------- */
+/*
+Sæt const/let inde i funktionen, hvis variablen kun skal bruges af funktionen. Sæt den udenfor, hvis flere funktioner eller resten af programmet skal kunne bruge den.
 
+named function:
+
+
+
+function testExample(a) {
+    const greeting = "Ready to function!" + a;
+    return greeting;
+}
+
+const name = " Robots 🙄";
+console.log(testExample(name));
+*/
+/*
+
+Anonymious functions
+bliver koblet til en variabel eller en event.
+
+*/
+
+/*
+const testExample = function () {
+    const greeting = "Ready to function!" + a;
+    return greeting;
+}
+
+const a = " Robots 🙄";
+console.log(testExample(a));
+
+
+Navngivne funktioner bruges typisk, når vi vil kunne genbruge og kalde en funktion ved dens navn. Anonyme funktioner bruges typisk som midlertidige funktioner, ofte som callbacks.
+*/
+//  NAVNGIVET                         ANONYM
+//
+//  Har et navn                       Har ikke et navn
+//
+//  function sayHello() {}            function() {}
+//
+//  Kaldes med sit navn               Kaldes typisk via en
+//                                    variabel/reference
+//
+//  God til funktioner,               God til callbacks og
+//  der skal genbruges                funktioner, der kun
+//                                    bruges ét bestemt sted
 /* --------------------------------------
           Indsæt tekst i html-body
 ----------------------------------------- */

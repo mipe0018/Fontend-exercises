@@ -28,6 +28,33 @@
 
 */
 
+/* --------------------------------------
+          Properties
+----------------------------------------- */
+
+//vi kan give konstanten item en egenskab - property .length - og derved vil vi få den samlede længde af alle karaktere i strengen. - altså 15 i konsollen.
+
+//PROPERTY = noget et objekt HAR
+
+/*
 const item = "Bottle of water";
 
-console.log(item);
+console.log(item.length);
+*/
+
+/* --------------------------------------
+          methods
+----------------------------------------- */
+//vi giver her array'et metoden push og tilføjer compas til vores array.
+
+//METHOD   = noget et objekt KAN GØRE
+
+/*
+const itemArr = ["Bottle", 4, true];
+itemArr.push("compas");
+console.log(itemArr);
+
+*/
+
+
+

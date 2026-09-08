@@ -96,19 +96,7 @@ const viking = {
     religion: "asatro"
 } 
 
-/* --------------------------------------
-          3. FUNCTIONS
------------------------------------------ */
-/*
 
-├── 
-│   ├── Functions
-│   ├── Parameters
-│   ├── Arguments
-│   ├── Return
-│   ├── Arrow functions
-│   └── Callbacks
-*/
 
 /* --------------------------------------
            4. DATA
