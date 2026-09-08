@@ -116,6 +116,46 @@ function isDog(animal) {
     return animal.type === "dog";
 }
 
+// selectSort function
+function selectSort(event) {
+    const sortBy = event.target.dataset.sort;
+    console.log(`User Selected ${sortBy}`);
+    sortList(sortBy);
+}
+
+
+//SortList sortere listen
+function sortList(sortBy) {
+    let sortedList = allAnimals;
+
+    if (sortBy === "name") {
+        sortedList = sortedList.sort(sortByName);
+    } else if (sortBy === "type") {
+        sortedList = sortedList.sort(sortByType);
+    }
+
+    
+    displayList(sortedList);
+};
+
+//Sort by name funktion
+function sortByName(animal1A, animal1B) {
+    if (animal1A.name < animal1B.name) {
+        return -1;
+    } else {
+        return 1;
+    }
+}
+
+//Sort by type funktion
+function sortByType(animal1A, animal1B) {
+    if (animal1A.type < animal1B.type) {
+        return -1;
+    } else {
+        return 1;
+    }
+}
+
 
 // Display animals
 function displayList(animals) {
