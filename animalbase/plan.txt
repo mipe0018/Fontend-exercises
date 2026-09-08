@@ -11,7 +11,7 @@ Sorting
 - try hardcoded sorting - by type ✔️
 - sort either name or type ✔️
 - add user interactivity ✔️
-- a more generic sort function 
+- a more generic sort function ✔️
 - change sort-direction *important!
 - add some cleanup
 

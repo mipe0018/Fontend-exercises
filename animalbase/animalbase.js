@@ -23,6 +23,10 @@ function registerButtons() {
     //indsætter vi denne i konsollen kan vi se de 3 knapper fra html siden. 
     document.querySelectorAll("[data-action='filter']")
     .forEach(button => button.addEventListener("click", selectFilter));
+
+    //Vi gør det samme ved at give "name" og "type" en funktion
+    document.querySelectorAll("[data-action='sort']")
+    .forEach(button => button.addEventListener("click", selectSort));
 }
 
 function loadJSON() {
@@ -82,7 +86,6 @@ function selectFilter(event) {
     filterList(filter);
 }
 
-
 // Filter animals
 function filterList(filterBy) {
 
@@ -110,7 +113,6 @@ function isCat(animal) {
     return animal.type === "cat";
 }
 
-
 // Check if animal is a dog
 function isDog(animal) {
     return animal.type === "dog";
@@ -128,34 +130,17 @@ function selectSort(event) {
 function sortList(sortBy) {
     let sortedList = allAnimals;
 
-    if (sortBy === "name") {
-        sortedList = sortedList.sort(sortByName);
-    } else if (sortBy === "type") {
-        sortedList = sortedList.sort(sortByType);
+        sortedList = sortedList.sort(sortByProperty);
+   
+    function sortByProperty(animal1A, animal1B) {
+    if (animal1A[sortBy] < animal1B[sortBy]) {
+        return -1;
+    } else {
+        return 1;
     }
-
-    
+}
     displayList(sortedList);
 };
-
-//Sort by name funktion
-function sortByName(animal1A, animal1B) {
-    if (animal1A.name < animal1B.name) {
-        return -1;
-    } else {
-        return 1;
-    }
-}
-
-//Sort by type funktion
-function sortByType(animal1A, animal1B) {
-    if (animal1A.type < animal1B.type) {
-        return -1;
-    } else {
-        return 1;
-    }
-}
-
 
 // Display animals
 function displayList(animals) {
@@ -166,7 +151,6 @@ function displayList(animals) {
     // Build a new list
     animals.forEach(displayAnimal);
 }
-
 
 // Display one animal
 function displayAnimal(animal) {
