@@ -13,8 +13,16 @@ const allAnimals = [];
 
 function start() {
     console.log("ready");
-
+//tilføjer funktionen "a"dd.eventlisteners på buttons"
+    registerButtons();
     loadJSON();
+}
+
+// add.eventlisteners på buttons. aka Registrer knapper. 
+function registerButtons() {
+    //indsætter vi denne i konsollen kan vi se de 3 knapper fra html siden. 
+    document.querySelectorAll("[data-action='filter']")
+    .forEach(button => button.addEventListener("click", selectFilter));
 }
 
 function loadJSON() {
@@ -66,18 +74,26 @@ function prepareObjects(jsonData) {
     displayList(allAnimals);
 }
 
+// selectFilter function
+function selectFilter(event) {
+    const filter = event.target.dataset.filter;
+    //console.log viser hvilket data-filter der tilhøre hvilken knap, dvs når der trykkes på en knap kan tilhørende filter ses i konsollen. 
+    console.log(`User Selected ${filter}`);
+    filterList(filter);
+}
+
 
 // Filter animals
-function filterList(animalType) {
+function filterList(filterBy) {
 
     let filteredList = allAnimals;
 
-    if (animalType === "cat") {
+    if (filterBy === "cat") {
 
         // Only cats
         filteredList = allAnimals.filter(isCat);
 
-    } else if (animalType === "dog") {
+    } else if (filterBy === "dog") {
 
         // Only dogs
         filteredList = allAnimals.filter(isDog);

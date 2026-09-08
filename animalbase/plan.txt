@@ -4,13 +4,18 @@ Filtering
 - filter either cats or dogs //
 - add user interactivity 
 - add the "all".filter
+- add some cleanup
 
 Sorting
 - try hardcoded sorting - by name
 - try hardcoded sorting - by type
 - add user interactivity
-- generic sort function 
-- change sort-direction 
+- a more generic sort function 
+- change sort-direction *important!
+- add some cleanup
 
 Combining filtering and sorting - may result conflict 
 - other fixes after that
+
+
+Der kan altid tilføjes flere punkter hvis nogle punkter er for komplekse.
