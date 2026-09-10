@@ -13,16 +13,16 @@ Sorting
 - add user interactivity ✔️
 - a more generic sort function ✔️
 - change sort-direction *important! ✔️
-- add some cleanup
+- add some cleanup ✔️
 
 Combining filtering and sorting - may result conflict 
+(Sorting breaks the filter, but filtering keeps the sorting, and we want sorting to keep the filter aswell)
 - other fixes after that
 
+- add some cleanup
 
 Der kan altid tilføjes flere punkter hvis nogle punkter er for komplekse.
 
 //============================================================
 //                     Spørgsmål
 // ============================================================
-
-Sortering af liste efter filtrering?
